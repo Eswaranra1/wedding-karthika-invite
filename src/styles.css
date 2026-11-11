@@ -130,7 +130,7 @@ button, a { font: inherit; }
 .kalash-flame { position:absolute; z-index:3; top:-5px; left:26px; color:#ffe3a0; font-size:24px; text-shadow:0 0 12px #e29b32; }
 .kalash-leaves { position:absolute; z-index:2; top:23px; left:34px; }.kalash-leaves i { position:absolute; bottom:0; width:18px; height:38px; border-radius:100% 0 100%; transform-origin:bottom; background:#4f792e; border:1px solid var(--gold-light); }.kalash-leaves i:nth-child(1){transform:rotate(-58deg)}.kalash-leaves i:nth-child(2){transform:rotate(-24deg)}.kalash-leaves i:nth-child(3){transform:rotate(20deg)}
 
-.wedding-title { position: relative; z-index: 7; width: min(680px, 94vw); margin: -8px 0 3px; text-align: center; color: #fff7df; font-size: clamp(20px, 3vw, 34px); line-height: 1.15; display: flex; justify-content: center; align-items: center; gap: clamp(6px, 1.5vw, 14px); text-shadow: 0 2px 7px rgba(0,0,0,.35); animation: titleReveal 1s 1.15s both; }
+.wedding-title { position: relative; z-index: 7; width: min(680px, 94vw); margin: -8px 0 3px; text-align: center; color: #fff7df; font-size: clamp(20px, 3vw, 34px); line-height: 1.15; display: flex; justify-content: center; align-items: center; gap: clamp(6px, 1.5vw, 14px); text-shadow: 0 2px 7px rgba(0,0,0,.35); animation: titleReveal 1s 1.15s both; margin-top:20px}
 .wedding-title b { color: var(--gold-light); font-size: .8em; }.wedding-title span { white-space: nowrap; }
 .hero-date { text-align: center; display: flex; flex-direction: column; align-items: center; line-height: 1.15; animation: fadeUp .8s 1.45s both; }
 .hero-date span { font-size: clamp(11px, 1.3vw, 15px); color: var(--gold-light); }.hero-date strong { color:#fff; font-size:clamp(20px,2.6vw,30px); letter-spacing:.04em; }.hero-date i { font-style:normal; font-size:clamp(12px,1.5vw,16px); color:#f5dfaa; }
@@ -230,4 +230,410 @@ button, a { font: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.petals{display:none}
+}
+
+.hero {
+  min-height: 100svh;
+  height: auto;
+  max-height: none;
+  padding: 82px clamp(12px, 2.5vw, 36px) 28px;
+  background:
+    radial-gradient(ellipse at 50% 28%, rgba(255, 164, 34, .2), transparent 42%),
+    radial-gradient(ellipse at 50% 100%, rgba(190, 37, 25, .6), transparent 55%),
+    linear-gradient(90deg, #b27b19 0 7px, transparent 7px calc(100% - 7px), #b27b19 calc(100% - 7px)),
+    linear-gradient(145deg, #8b101d 0%, #650b17 52%, #480811 100%);
+  border-bottom: 5px solid #d5a339;
+}
+
+.hero::before {
+  opacity: .2;
+  background-size: 88px 88px;
+}
+
+.hero::after {
+  inset: 14px 14px 12px;
+  border: 1px solid rgba(255, 219, 126, .88);
+  box-shadow:
+    inset 0 0 0 5px rgba(104, 23, 34, .74),
+    inset 0 0 0 7px rgba(231, 199, 125, .58),
+    0 0 18px rgba(239, 177, 52, .22);
+}
+
+.hero-frame {
+  width: min(100%, 1300px);
+  height: auto;
+  min-height: calc(100svh - 110px);
+  margin: 0 auto;
+  padding: 24px clamp(14px, 3vw, 40px) 22px;
+  border: 1px solid rgba(255, 218, 123, .95);
+  outline: 5px solid rgba(200, 154, 70, .28);
+  outline-offset: -12px;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(193, 47, 35, .24), transparent 55%),
+    linear-gradient(90deg, rgba(255, 210, 115, .035), transparent 18% 82%, rgba(255, 210, 115, .035));
+}
+
+.hero .blessing {
+  color: #ffe28c;
+  font-size: clamp(14px, 1.7vw, 20px);
+  text-shadow: 0 2px 9px rgba(0, 0, 0, .45);
+}
+
+.hero-heading-plaque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 28px);
+  width: min(600px, 88%);
+  margin: 8px 0 4px;
+  padding: 3px 20px 8px;
+  color: #ffe27d;
+  border: 1px solid rgba(255, 207, 72, .8);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(81, 5, 14, .96), rgba(138, 20, 27, .96));
+  box-shadow: 0 0 0 4px rgba(188, 112, 22, .22), 0 5px 16px rgba(30, 2, 5, .28);
+}
+
+.hero-heading-plaque h2 {
+  margin: 0;
+  font-size: clamp(25px, 4vw, 46px);
+  line-height: 1.4;
+  color: #ffd35d;
+  text-shadow: 0 2px 0 #7d280b, 0 0 12px rgba(255, 188, 38, .52);
+}
+
+.hero-heading-plaque > span {
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1;
+}
+
+.hero .couples-label {
+  margin: 2px 0 0;
+  color: #ffdf82;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 700;
+}
+
+.hero .ceremony-line {
+  margin: 0 0 4px;
+  color: #fff0c1;
+  letter-spacing: .04em;
+  font-size: clamp(12px, 1.4vw, 16px);
+}
+
+.hero .couple-composition {
+  width: min(660px, 82vw);
+  height: clamp(220px, 34vh, 300px);
+  min-height: 0;
+  gap: clamp(8px, 2vw, 22px);
+  margin: 8px 0 12px;
+}
+
+.hero .portrait-arch {
+  width: min(43%, 250px);
+  max-width: 250px;
+}
+
+.hero .portrait-inner {
+  border: 3px solid #ffd45e;
+  border-radius: 48% 48% 8px 8px;
+  background: #4a0710;
+  box-shadow:
+    0 0 0 4px rgba(247, 176, 30, .32),
+    0 0 24px rgba(255, 184, 48, .3),
+    0 14px 28px rgba(35, 4, 7, .45);
+}
+
+.hero .portrait-inner::before {
+  border-color: rgba(255, 238, 170, .9);
+}
+
+.hero .portrait-inner img {
+  object-fit: cover;
+  object-position: center 30%;
+  background: #4a0710;
+}
+
+.hero .bride-arch .portrait-inner img {
+  object-position: center 38%;
+}
+
+.hero .portrait-caption {
+  width: 78%;
+  margin-bottom: 7px;
+  padding: 6px 8px;
+  border-color: #ffd45e;
+  background: linear-gradient(180deg, #9b1d22, #5c0b14);
+  color: #fff3d0;
+  font-size: clamp(11px, 1.4vw, 15px);
+}
+
+.hero .center-kalash {
+  opacity: 1;
+  filter: drop-shadow(0 0 12px rgba(255, 189, 50, .5));
+}
+
+.hero .wedding-title {
+  width: min(850px, 100%);
+  margin: 0 auto 12px;
+  padding: 7px clamp(10px, 2.5vw, 30px);
+  border: 1px solid #f5c64c;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(108, 8, 17, .98), rgba(77, 5, 13, .98));
+  box-shadow: 0 0 0 4px rgba(195, 115, 24, .24), 0 7px 16px rgba(30, 2, 5, .3);
+  color: #fff5dc;
+  font-size: clamp(21px, 3vw, 36px);
+  line-height: 1.3;
+}
+
+.hero .wedding-title b {
+  color: #ffce35;
+}
+
+.hero-event-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(680px, 96%);
+  margin: 0 auto 10px;
+  border: 2px solid #edb837;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ffe8a0, #f3c35c 52%, #ffe6a0);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .36), 0 7px 18px rgba(25, 2, 5, .28);
+  color: #64101a;
+}
+
+.hero-event-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 9px 14px;
+  text-align: center;
+}
+
+.hero-event-item + .hero-event-item {
+  border-left: 1px solid rgba(125, 53, 14, .38);
+}
+
+.hero-event-item > svg {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  color: #861d1b;
+}
+
+.hero-event-item div,
+.hero-venue div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-event-item span,
+.hero-venue span {
+  font-size: clamp(11px, 1.3vw, 14px);
+  font-weight: 700;
+}
+
+.hero-event-item strong {
+  font-size: clamp(17px, 2.1vw, 25px);
+  line-height: 1.25;
+}
+
+.hero-event-item i,
+.hero-venue i {
+  font-style: normal;
+  font-size: clamp(11px, 1.25vw, 14px);
+}
+
+.hero-venue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: min(790px, 96%);
+  margin: 0 auto 10px;
+  padding: 9px 18px;
+  border: 1px solid #efbd41;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #ffe6a0, #f8cf70 50%, #ffe6a0);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .28), 0 5px 14px rgba(27, 2, 5, .24);
+  color: #68101a;
+  text-align: center;
+}
+
+.hero-venue > svg {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+}
+
+.hero-venue strong {
+  font-size: clamp(14px, 1.7vw, 20px);
+  line-height: 1.5;
+}
+
+.hero-reception {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min(580px, 92%);
+  margin: 0 auto;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 205, 79, .9);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(100, 8, 18, .98), rgba(64, 4, 12, .98));
+  color: #ffdf81;
+  font-size: clamp(12px, 1.5vw, 16px);
+  box-shadow: 0 0 0 3px rgba(195, 115, 24, .18);
+}
+
+.hero-reception strong {
+  color: #fff4d7;
+  font-size: 1.08em;
+}
+
+.hero-reception i {
+  font-style: normal;
+}
+
+.hero .mango-cluster {
+  z-index: 2;
+  bottom: -34px;
+  opacity: .72;
+}
+
+.hero .petals {
+  z-index: 2;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 100svh;
+    height: auto;
+    padding: 68px 8px 22px;
+  }
+
+  .hero::after {
+    inset: 8px 7px;
+  }
+
+  .hero-frame {
+    width: 100%;
+    min-height: 0;
+    padding: 22px 10px 16px;
+  }
+
+  .hero .thoranam {
+    height: 58px;
+  }
+
+  .hero-heading-plaque {
+    width: min(94%, 480px);
+    gap: 10px;
+    margin-top: 7px;
+    padding: 3px 12px 6px;
+  }
+
+  .hero-heading-plaque h2 {
+    font-size: clamp(24px, 7vw, 34px);
+  }
+
+  .hero .couple-composition {
+    width: min(100%, 500px);
+    height: clamp(220px, 38vh, 290px);
+    gap: 8px;
+    margin: 8px 0 12px;
+  }
+
+  .hero .portrait-arch {
+    width: 44%;
+  }
+
+  .hero .portrait-caption {
+    padding: 5px 4px;
+    font-size: 11px;
+  }
+
+  .hero .center-kalash {
+    transform: scale(.8);
+    transform-origin: bottom center;
+  }
+
+  .hero .wedding-title {
+    width: min(100%, 500px);
+    margin-bottom: 12px;
+    padding: 8px;
+    font-size: clamp(18px, 5vw, 24px);
+  }
+
+  .hero-event-strip {
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .hero-event-item {
+    gap: 7px;
+    padding: 9px 5px;
+  }
+
+  .hero-event-item > svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero-event-item strong {
+    font-size: clamp(15px, 4vw, 19px);
+  }
+
+  .hero-event-item span,
+  .hero-event-item i {
+    font-size: 10px;
+  }
+
+  .hero-venue {
+    width: 100%;
+    padding: 8px 10px;
+  }
+
+  .hero-venue strong {
+    font-size: clamp(13px, 3.7vw, 17px);
+  }
+
+  .hero-venue i {
+    font-size: 10px;
+  }
+
+  .hero-reception {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .hero .wedding-title {
+    flex-direction: column;
+    gap: 0;
+    line-height: 1.2;
+  }
+
+  .hero .wedding-title b {
+    font-size: .72em;
+    line-height: 1;
+  }
+
+  .hero-event-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-event-item + .hero-event-item {
+    border-top: 1px solid rgba(125, 53, 14, .38);
+    border-left: 0;
+  }
 }

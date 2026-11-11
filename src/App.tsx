@@ -99,19 +99,49 @@ export function WeddingHero() {
         <div className="corner corner-tl">✦</div><div className="corner corner-tr">✦</div>
         <div className="corner corner-bl">✦</div><div className="corner corner-br">✦</div>
         <p className="blessing">ஸ்ரீ முத்தாரம்மன் அருளால்</p>
-        <div className="gold-divider"><span /><b>❦</b><span /></div>
+        <div className="hero-heading-plaque">
+          <span aria-hidden="true">❧</span>
+          <h2>திருமண விழா</h2>
+          <span aria-hidden="true">❧</span>
+        </div>
         <p className="couples-label">மணமக்கள்</p>
-        <p className="ceremony-line">திருமண விழா</p>
+        <p className="ceremony-line">இச் சுப திருமண விழா</p>
         <WeddingCouple />
         <h1 className="wedding-title">
           <span>M. சந்தன குமார்</span>
           <b>&amp;</b>
           <span>R. கார்த்திகா</span>
         </h1>
-        <div className="hero-date">
-          <span>திருமண நாள்</span>
-          <strong>22-11-2026</strong>
-          <i>ஞாயிற்றுக்கிழமை</i>
+        <div className="hero-event-strip">
+          <div className="hero-event-item">
+            <CalendarDays aria-hidden="true" />
+            <div>
+              <span>திருமண நாள்</span>
+              <strong>22-11-2026</strong>
+              <i>ஞாயிற்றுக்கிழமை</i>
+            </div>
+          </div>
+          <div className="hero-event-item">
+            <Clock3 aria-hidden="true" />
+            <div>
+              <span>முகூர்த்த நேரம்</span>
+              <strong>காலை 10:30 – 11:30</strong>
+              <i>சுப முகூர்த்தம்</i>
+            </div>
+          </div>
+        </div>
+        <div className="hero-venue">
+          <MapPin aria-hidden="true" />
+          <div>
+            <span>திருமண மண்டபம்</span>
+            <strong>பேட்டை செக்கிழார் ஸ்ரீ சந்தனமார் அம்மாள் சன்னதி</strong>
+            <i>சுந்தர விநாயகர் கோவில் தெரு, சேனைத்தலைவர் மண்டபம், பேட்டை</i>
+          </div>
+        </div>
+        <div className="hero-reception">
+          <span>வரவேற்பு</span>
+          <strong>25-11-2026</strong>
+          <i>புதன்கிழமை · மாலை 5:00 மணி</i>
         </div>
       </div>
       <MangoLeafDecoration />
