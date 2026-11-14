@@ -1,4 +1,6 @@
 import { CalendarDays, Clock3, Heart, MapPin, Navigation } from 'lucide-react'
+import { useEffect } from 'react'
+import { useWeddingBackgroundMusic } from './useWeddingBackgroundMusic'
 
 const photo = (name: string) => `/photos/${encodeURIComponent(name)}`
 
@@ -259,6 +261,16 @@ export function BlessingsSection() {
 }
 
 export default function App() {
+  const musicController = useWeddingBackgroundMusic()
+
+  useEffect(() => {
+    void musicController.start()
+
+    return () => {
+      musicController.stop()
+    }
+  }, [musicController])
+
   return (
     <>
       <WeddingHero />
