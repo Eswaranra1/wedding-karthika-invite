@@ -5,10 +5,10 @@ import { useWeddingBackgroundMusic } from './useWeddingBackgroundMusic'
 const photo = (name: string) => `/photos/${encodeURIComponent(name)}`
 
 const photos = [
-  { src: photo("bride.jpeg"), alt: "R. கார்த்திகா", label: "மணமகள்" },
-  { src: photo("groom.jpeg"), alt: "M. சந்தன குமார்", label: "மணமகன்" },
+  { src: photo("bride.png"), alt: "R. கார்த்திகா", label: "மணமகள்" },
+  { src: photo("groom.png"), alt: "M. சந்தன குமார்", label: "மணமகன்" },
   {
-    src: photo("elder brother.jpeg"),
+    src: photo("elder brother.png"),
     alt: "குடும்ப நினைவுகள்",
     label: "R. சந்தனபெருமாள்",
   },
@@ -73,7 +73,7 @@ export function WeddingCouple() {
     <div className="couple-composition" aria-label="மணமகன் மற்றும் மணமகள்">
       <div className="portrait-arch groom-arch">
         <div className="portrait-inner">
-          <img src="/photos/groom.jpeg" alt="மணமகன் M. சந்தன குமார்" />
+          <img src="/photos/groom.png" alt="மணமகன் M. சந்தன குமார்" />
         </div>
         <span className="portrait-caption">மணமகன்</span>
       </div>
@@ -84,7 +84,7 @@ export function WeddingCouple() {
       </div>
       <div className="portrait-arch bride-arch">
         <div className="portrait-inner">
-          <img src="/photos/bride.jpeg" alt="மணமகள் R. கார்த்திகா" />
+          <img src="/photos/bride.png" alt="மணமகள் R. கார்த்திகா" />
         </div>
         <span className="portrait-caption">மணமகள்</span>
       </div>
